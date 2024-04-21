@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arobarak Group</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Reset CSS */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f3f3;
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden; /* Prevent horizontal scroll on smaller screens */
+        }
+
+        header {
+            background-color: #007bff;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        header img {
+            width: 80px;
+            height: auto;
+            margin: 0 20px;
+            vertical-align: middle;
+        }
+
+        header h1 {
+            font-size: 24px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #f9a825;
+        }
+
+        .section {
+            padding: 40px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+
+        .section h2 {
+            font-size: 24px;
+            color: #007bff;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .section p {
+            font-size: 16px;
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        #gallery {
+            text-align: center;
+        }
+
+        #gallery img {
+            width: 100%;
+            max-width: 300px; /* Adjust max-width as needed */
+            height: auto;
+            margin: 10px;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        #gallery img:hover {
+            transform: scale(1.1); /* Enlarge the image on hover */
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+            transform: translateY(-3px); /* Lift the button slightly on hover */
+        }
+
+        /* Media Queries for Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 20px;
+            }
+
+            nav ul li a {
+                font-size: 14px;
+            }
+
+            .section {
+                padding: 30px;
+            }
+
+            .section h2 {
+                font-size: 22px;
+            }
+
+            .section p {
+                font-size: 14px;
+            }
+
+            #gallery img {
+                max-width: 250px;
+            }
+
+            button {
+                padding: 12px 24px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <img src="image__1_-removebg-preview.png" alt="Company Logo">
+        <h1>Arobarak Group</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#goals">Our Goals</a></li>
+                <li><a href="#business">Our Business</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Home Section -->
+        <section id="home" class="section">
+            <h2>Welcome to Arobarak Group</h2>
+            <p>We specialize in providing top-quality crane services for construction projects.</p>
+        </section>
+
+        <!-- Goals Section -->
+        <section id="goals" class="section">
+            <h2>Our Goals</h2>
+            <p>To be your trusted partner for Oil and Gas, Property, Construction, and Scraping Sectors.</p>
+        </section>
+
+        <!-- Business Section -->
+        <section id="business" class="section">
+            <h2>Our Business</h2>
+            <p>We offer a wide range of crane services including rentals, operation, and maintenance.</p>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <h2>Contact Us</h2>
+            <div id="contact-info">
+                <ul>
+                    <li><strong>Email:</strong> david.moore@arobarak.com</li>
+                    <li><strong>Phone:</strong> +62 811-9881-123</li>
+                    <li><strong>Address:</strong> Jl. Kemang I No.19, Bangka, Kec. Mampang Prpt., Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12730</li>
+                </ul>
+            </div>
+            <!-- Email Button -->
+            <button onclick="sendEmail()">Send Email</button>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="section">
+            <h2>Picture Gallery</h2>
+            <div>
+                <img src="image (3).png" alt="Gallery Image 1">
+                <img src="image (5).png" alt="Gallery Image 2">
+                <img src="image (6).png" alt="Gallery Image 3">
+                <!-- Add more images as needed -->
+            </div>
+        </section>
+    </div>
+
+    <script>
+        function sendEmail() {
+            var recipientEmail = 'david.moore@arobarak.com';
+            var subject = 'Inquiry from Arobarak Group Website';
+            var body = 'Hello David,\n\nI am reaching out via your website regarding...'; // Customize the email body
+            
+            var mailtoLink = 'mailto:' + recipientEmail + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+            
+            window.location.href = mailtoLink;
+        }
+    </script>
+</body>
+</html>
